@@ -163,3 +163,5 @@ def locate_cards(cards, query):
 
 from jovian.pythondsa import evaluate_test_cases, evaluate_test_case
 evaluate_test_cases(locate_cards, tests)
+
+# Time complexity of BINARY SEARCH is O(log N) and Space complexity is O(1)
