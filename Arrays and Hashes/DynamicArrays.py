@@ -28,8 +28,14 @@ class DynamicArray:
             print(self.arr[i])
 
     def insertt(self, i, n):
-        if i <= self.length:
-            self.arr[i] = n 
+        if i > self.length:
+            return  # Invalid insert
+        if self.length == self.capacity:
+            self.resize()
+        for j in range(self.length, i, -1):
+            self.arr[j] = self.arr[j - 1]  # Shift right
+        self.arr[i] = n
+        self.length += 1
 
     def print(self):
         for i in range(self.length):
@@ -43,6 +49,6 @@ class DynamicArray:
 
 new = DynamicArray()
 new.insert(77)
+new.insertt(0,55)
 new.get(0)
-new.insertt(i=0, n=10)
 new.print()
