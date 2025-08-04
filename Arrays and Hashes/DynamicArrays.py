@@ -27,7 +27,7 @@ class DynamicArray:
         if i <= self.length:
             print(self.arr[i])
 
-    def insertt(self, i, n):
+    def true_insert(self, i, n):
         if i > self.length:
             return  # Invalid insert
         if self.length == self.capacity:
